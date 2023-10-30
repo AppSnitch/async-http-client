@@ -85,9 +85,6 @@ extension HTTPClient {
                     guard var value = value, !value.isEmpty else {
                         continue
                     }
-                    if value.first == UInt8(ascii: ".") {
-                        value.removeFirst()
-                    }
                     guard !value.isEmpty else {
                         parsedDomain = nil
                         continue
